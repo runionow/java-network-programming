@@ -8,7 +8,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class EchoTCP {
-    private static final int TELNET_PORT = 1244;
+    private static final int TELNET_PORT = 9090;
     private static final int BUFFER_LEN = 2000;
 
     public static void main(String[] args) throws IOException {
