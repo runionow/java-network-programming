@@ -2,8 +2,11 @@ package move;
 
 import java.io.Serializable;
 
-public class Message implements MessageBase {
-    private final String text;
+public class Message extends MessageAbstract {
+    private String text;
+    public Message(){
+        super();
+    }
 
     public Message(String text) {
         this.text = text;
@@ -13,8 +16,13 @@ public class Message implements MessageBase {
         return text;
     }
 
-    @Override
     public int count() {
         return this.text.length() + 10;
     }
+
+    @Override
+    public void write(String key) {
+        System.out.println("We are in message");
+    }
 }
+
